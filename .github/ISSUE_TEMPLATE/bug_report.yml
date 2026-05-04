@@ -7,7 +7,7 @@ body:
     attributes:
       label: Device id
       description: Value of `device:` in your `builder.yml`
-      placeholder: xiaomi_ax3600
+      placeholder: linksys_mr7500
     validations:
       required: true
 
