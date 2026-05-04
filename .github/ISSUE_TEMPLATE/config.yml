@@ -1,6 +1,6 @@
 blank_issues_enabled: false
 contact_links:
-  - name: OpenWrt IPQ807x NSS forum thread
+  - name: OpenWrt IPQ60xx NSS forum thread
     url: https://forum.openwrt.org/t/ipq807x-nss-build/148529
     about: Upstream community discussion of NSS-accelerated OpenWrt builds.
   - name: Upstream NSS sources (qosmio/openwrt-ipq)
