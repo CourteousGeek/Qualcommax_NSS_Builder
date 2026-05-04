@@ -174,7 +174,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: ${{ needs.config.outputs.device }}-images
-          path: openwrt/bin/targets/qualcommax/ipq807x
+          path: openwrt/bin/targets/qualcommax/ipq60xx
           if-no-files-found: error
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
@@ -196,7 +196,7 @@ jobs:
             echo "- **Trigger**: \`${GITHUB_EVENT_NAME}\`"
           } >release_notes.md
 
-          mapfile -t assets < <(find openwrt/bin/targets/qualcommax/ipq807x/ -type f -not -path "*/packages/*")
+          mapfile -t assets < <(find openwrt/bin/targets/qualcommax/ipq60xx/ -type f -not -path "*/packages/*")
           gh release create "$tag_name" \
             --repo "$GITHUB_REPOSITORY" \
             --title "OpenWrt Build $date" \
