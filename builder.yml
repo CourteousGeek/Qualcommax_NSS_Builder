@@ -19,7 +19,7 @@ nss_packages:
 # Device id. Must match a directory under devices/<id>/ containing
 #   - config        (the OpenWrt .config file)
 #   - files/        (overlay rootfs, optional)
-device: xiaomi_ax3600
+device: linksys_mr7500
 
 # Custom feeds appended to feeds.conf during build. Order matters.
 # Each entry becomes:  src-git <name> <url>
