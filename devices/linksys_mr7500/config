@@ -1,3 +1,29 @@
+## Target Platform
 CONFIG_TARGET_qualcommax=y
 CONFIG_TARGET_qualcommax_ipq60xx=y
 CONFIG_TARGET_qualcommax_ipq60xx_DEVICE_linksys_mr7500=y
+
+## Essential NSS Configuration
+CONFIG_ATH11K_NSS_SUPPORT=y
+CONFIG_ATH11K_NSS_MESH_SUPPORT=y
+CONFIG_PACKAGE_MAC80211_NSS_SUPPORT=y
+CONFIG_PACKAGE_kmod-qca-nss-drv=y
+CONFIG_PACKAGE_kmod-qca-nss-drv-bridge-mgr=y
+CONFIG_PACKAGE_kmod-qca-nss-ecm=y
+
+# Reduce kernel module size
+# Disable unnecessary debugging for Wi-Fi driver.
+CONFIG_ATH11K_DEBUGFS_HTT_STATS=n
+CONFIG_ATH11K_DEBUGFS_STA=n
+# Disables thermal throttling support for ath11k.
+CONFIG_ATH11K_THERMAL=n
+
+## Additional Packages and Utilities
+CONFIG_PACKAGE_luci=y
+CONFIG_PACKAGE_luci-app-firewall=y
+CONFIG_PACKAGE_luci-app-package-manager=y
+CONFIG_PACKAGE_kmod-usb-storage=y
+
+## Prevent Custom Feeds
+CONFIG_FEED_nss_packages=n
+CONFIG_FEED_sqm_scripts_nss=n
